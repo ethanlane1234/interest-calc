@@ -1,0 +1,165 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --panel: #0f1c2d;
+  --panel-2: #14253a;
+  --text: #f4f7fb;
+  --muted: #9fb0c8;
+  --accent: #4cc9f0;
+  --accent-2: #4361ee;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #132438);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: rgba(15, 28, 45, 0.95);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  padding: 1.25rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.6rem;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+input,
+button {
+  font: inherit;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 0.8rem 0.95rem;
+}
+
+input {
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  font-weight: 700;
+  border: none;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.summary-card {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.summary-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+}
+
+.summary-card .value {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.chart-card {
+  background: linear-gradient(180deg, rgba(67, 97, 238, 0.1), rgba(76, 201, 240, 0.05));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.axis-label {
+  fill: var(--muted);
+  font-size: 12px;
+}
+
+.grid-line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+}
+
+.line {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.dot {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.value-label {
+  fill: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: rgba(7, 17, 31, 0.85);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem 0.8rem 2rem;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel intro">
+        <p class="eyebrow">Static GitHub Pages</p>
+        <h1>Compound Interest Explorer</h1>
+        <p>
+          Compare how your money grows over time at different annual rates.
+          The chart updates instantly so you can see the impact of each rate.
+        </p>
+      </section>
+
+      <section class="panel calculator">
+        <form id="calculator-form">
+          <label>
+            Initial amount ($)
+            <input id="principal" type="number" min="0" step="100" value="1000" required />
+          </label>
+          <label>
+            Years
+            <input id="years" type="number" min="1" max="40" step="1" value="10" required />
+          </label>
+          <label>
+            Rates to compare (%)
+            <input id="rates" type="text" value="3, 5, 7" placeholder="3, 5, 7" required />
+          </label>
+          <button type="submit">Calculate</button>
+        </form>
+      </section>
+
+      <section class="panel results">
+        <div id="summary" class="summary-grid"></div>
+        <div class="chart-card">
+          <h2>Growth over time</h2>
+          <svg id="chart" viewBox="0 0 600 320" role="img" aria-label="Compound interest growth chart"></svg>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
